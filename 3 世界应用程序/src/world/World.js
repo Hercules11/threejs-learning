@@ -1,6 +1,9 @@
 import { createCamera } from './components/camera.js';
-// import { createCube } from './components/cube.js';
-import { createTriangle } from './components/triangle.js';
+import { createCube } from './components/cube.js';
+// import { createTriangle } from './components/triangle.js';
+// import { createSphere } from './components/sphere.js';
+// import { createTorus } from './components/torus.js';
+import { createSquare, createSquareWithIndex } from './components/square.js';
 import { createScene } from './components/scene.js';
 
 import { createRenderer } from './systems/renderer.js';
@@ -19,11 +22,16 @@ class World {
         renderer = createRenderer();
         container.append(renderer.domElement);
 
-        // const cube = createCube();
-
-        const triangle = createTriangle();
-
-        scene.add(triangle);
+        // const something = createCube();
+        // const something = createSphere()
+        // const something = createTriangle();
+        // const something = createTorus()
+        // const something = createSquare()
+        const something = createSquareWithIndex();
+        scene.add(something);
+        const somethingCopy = createSquareWithIndex()
+        somethingCopy.position.set(3, 2, 1); // 做 3d 图形的话，时时刻刻在脑海里面有个 三维坐标系
+        scene.add(somethingCopy)
 
         const resizer = new Resizer(container, camera, renderer);
     }

@@ -15,7 +15,7 @@ function createTriangle() {
     geometry.computeVertexNormals();
 
     const material = new MeshBasicMaterial({
-        color: 0xff4f4f,  // 注意：color 不需要引号
+        color: 'Violet',  // 注意：color 不需要引号
         wireframe: false, // 注意：是 wireframe，不是 wireFrame
         side: DoubleSide,
     });
