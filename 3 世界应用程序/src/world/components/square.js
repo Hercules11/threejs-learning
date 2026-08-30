@@ -16,7 +16,7 @@ function createSquare() {
 
     // itemSize = 3 because there are 3 values (components) per vertex
     geometry.setAttribute('position', new BufferAttribute(vertices, 3));
-    const material = new MeshBasicMaterial({ color: 0xff0000 });
+    const material = new MeshBasicMaterial({ color: 0x4f4f4f });
     const square = new Mesh(geometry, material);
 
     return square;
@@ -40,7 +40,7 @@ function createSquareWithIndex() {
     geometry.setIndex(indices);
     geometry.setAttribute('position', new BufferAttribute(vertices, 3));
 
-    const material = new MeshBasicMaterial({ color: 0xff0000 });
+    const material = new MeshBasicMaterial({ color: 0x4f4f4f });
     const square = new Mesh(geometry, material);
 
     return square;

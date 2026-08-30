@@ -3,6 +3,7 @@ import { createCube } from './components/cube.js';
 // import { createTriangle } from './components/triangle.js';
 // import { createSphere } from './components/sphere.js';
 // import { createTorus } from './components/torus.js';
+import { createLights } from './components/lights.js';
 import { createSquare, createSquareWithIndex } from './components/square.js';
 import { createScene } from './components/scene.js';
 
@@ -32,6 +33,10 @@ class World {
         const somethingCopy = createSquareWithIndex()
         somethingCopy.position.set(3, 2, 1); // 做 3d 图形的话，时时刻刻在脑海里面有个 三维坐标系
         scene.add(somethingCopy)
+
+        const light = createLights();
+
+        scene.add(something, light);
 
         const resizer = new Resizer(container, camera, renderer);
     }
